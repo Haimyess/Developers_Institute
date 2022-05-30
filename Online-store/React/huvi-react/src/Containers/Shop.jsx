@@ -6,10 +6,13 @@ import ProductsList from '../Components/ProductsList';
 import {products} from '../products';
 
 class Shop extends React.Component {
+
+  
   constructor(props) {
     super(props);
     this.state = {
-      products: products
+      products: products,
+      cart: []
     }
   }
   render() {

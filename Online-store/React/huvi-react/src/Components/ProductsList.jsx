@@ -10,7 +10,7 @@ function ProductsList ({productsArray}) {
       {
         productsArray.map(product => {
           return (
-            <ProductCard productName={product.productName} productImage={product.image} productPrice={product.price} />
+            <ProductCard  key={product.id} product = {product} />
           )
         })
       }

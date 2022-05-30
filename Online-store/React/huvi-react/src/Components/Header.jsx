@@ -2,15 +2,19 @@ import React from "react";
 import Nav from './Nav'
 import Search from "./Search";
 
+// import Navbar from 'react-bootstrap/Navbar'
+
 function Header () {
   return (
       <>
-        <div>
+        <header>
+          <img src='' />
           <Search />
 
-        </div>
+        </header>
         <Nav />
-      </>
+      
+  </>
   )
 }
 

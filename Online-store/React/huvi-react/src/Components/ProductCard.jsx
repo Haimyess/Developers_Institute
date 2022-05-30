@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import {appContext} from '../App';
 
-function ProductCard (props) {
+function ProductCard ({product}) {
+   // const [cartItems, setCartItems] = useState([]);
+
+   // AddToCart = () => {
+   const {setCart, cart} = useContext(appContext);
+   const addToCart = (product) => {
+      cart.push(product);
+      setCart([...cart]);
+   }   // }
    return (
       <>
          <div>
-            <img src={props.productImage} alt="" />
+            <img src={product.productImage} alt="" />
             <div>
-               <p>{props.productName}</p>
+               <h3>{product.productName}</h3>
             </div>
             <div>
-               <p>{props.productPrice}</p>
-               <button>Add to Cart</button>
+               <p>${product.productPrice}</p>
+
+               <button  onClick={()=> addToCart({product})} >Add to Cart</button>
             </div>
          </div>
       </>

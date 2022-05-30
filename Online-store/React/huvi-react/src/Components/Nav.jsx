@@ -2,6 +2,8 @@ import React from "react";
 import Button from './Button'
 import {Link} from 'react-router-dom';
 
+
+
 function Nav () {
     return (
         <>
@@ -13,8 +15,13 @@ function Nav () {
                 </ul>
                 <Button />
             </nav>
+
+
+
+
         </>
     )
 }
+
 
 export default Nav;
